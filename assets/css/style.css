@@ -1,0 +1,517 @@
+:root {
+    --color-bg-body: #041642; /*granulated*/
+    --color-bg-section: #003e91; /*granulated 2*/
+    --color-bg-card: #002063; /*granulated 3*/
+    --color-white: #ffffff;
+    --color-title: #19192e;
+    --color-linkedin: #0077b5;
+    --color-linkedin-hover: #005c8a;
+    --color-github: #0077b5;
+    --color-github-hover: #005c8a;
+    --color-cv: #0077b5;
+    --color-cv-hover: #005c8a;
+
+    --font-main: 'Open Sans', sans-serif;
+    --font-size-base: 1.2em;
+    --font-size-title: 2em;
+    --font-size-h1: 4.5em;
+    --font-size-h3: 2em;
+    --font-size-small: 0.9em;
+
+    --text-center: center;
+    --border-radius: 0.313em;
+}
+
+body {
+    background-image: url('../img/granulated.png');
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-main);
+}
+
+::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+h5, p {
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    margin-bottom: 1.25em;
+}
+
+main, header, section, footer {
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 1.25em;
+    background-image: url('../img/granulated2.png');
+}
+
+section {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: var(--text-center);
+}
+
+header {
+    padding: 0.625em 1.25em;
+    text-align: var(--text-center);
+}
+
+/*navigation bar*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-image: url('../img/granulated2.png');
+    padding: 0.625em 0;
+    z-index: 1200;
+}
+
+nav a {
+    padding: 0.625em 0.938em;
+    text-decoration: none;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    margin: 0 0.625em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/*Header*/
+.header h1 {
+    color: var(--color-white);
+    font-size: var(--font-size-h1);
+    margin-bottom: 0.625em;
+}
+
+.header h3 {
+    color: var(--color-white);
+    font-size: var(--font-size-h3);
+    margin-top: 0;
+    margin-bottom: 0em;
+    text-align: var(--text-center);
+}
+
+.header p {
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    margin-top: 0;
+    margin-bottom: 0.625em;
+    text-align: var(--text-center);
+}
+
+/*About me*/
+.about-me {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25em;
+    margin-top: 1.25em;
+    padding-left: 1.25em;
+    justify-items: flex-start;
+    align-items: center;
+    max-width: 68.75em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me h2 {
+    text-align: var(--text-center);
+    margin-bottom: 0.625em;
+    font-size: var(--font-size-title);
+    color: var(--color-white);
+}
+
+.img-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todo a la izquierda */
+    gap: 0.625em;
+}
+
+.img-profile img {
+    width: 12.5em; /* Más pequeño */
+    height: 12.5em;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    padding-top: 0em;
+    gap: 0.5em;
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+}
+
+.icon-chile {
+    padding-top: 0em;
+    height: 1.35em;
+    width: 1.35em;
+}
+
+/*Contenedor del texto*/
+.container-about-me {
+    background-image: url('../img/granulated3.png');
+    padding: 1.25em;
+    border-radius: var(--border-radius);
+    max-width: 68.75em;
+}
+
+.p-about-me {
+    flex: 1;
+    text-align: justify;
+    margin-right: 3.125em;
+}
+
+.p-about-me p {
+    color: var(--color-white);
+}
+
+/*Experiencia laboral*/
+.work-experience {
+    padding: 2.5em 1.25em;
+    background-image: url('../img/granulated2.png');
+}
+
+.work-experience h2 {
+    text-align: var(--text-center);
+    margin-bottom: 1em;
+    font-size: var(--font-size-title);
+    color: var(--color-white);
+}
+
+.work-experience p {
+    text-align: var(--text-center);
+    color: var(--color-white);
+    margin-top: 0em;
+}
+
+/*Línea de tiempo*/
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 1.25em;
+    border-left: 0.188em solid var(--color-white);
+    max-width: 68.75em;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5em;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.688em;
+    top: 0.313em;
+    width: 1.25em;
+    height: 1.25em;
+    background-image: url('../img/granulated2.png');
+    border-radius: 50%;
+    border: 0.188em solid var(--color-white);
+    box-shadow: 0 0 0 0.188em var(--color-bg-section);
+}
+
+.timeline-content {
+    background-image: url('../img/granulated3.png');
+    padding: 1.25em;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3,
+.timeline-content span,
+.timeline-content p {
+    color: var(--color-white);
+    margin: 0;
+}
+
+.timeline-content span {
+    display: block;
+    font-size: var(--font-size-small);
+    margin: 0.313em 0 0.625em;
+}
+
+.icon-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.icon-text p {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+    text-align: left;
+    padding-bottom: 1.25em;
+    font-size: var(--font-size-base);
+}
+
+.icon-text img {
+    height: 1.25em;
+    width: 1.25em;
+    vertical-align: middle;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.icon-text img:hover {
+    transform: scale(1.5);
+}
+
+/*Proyectos y habilidades*/
+.proyectos h2,
+.skills h2 {
+    color: var(--color-white);
+    font-size: var(--font-size-title);
+    margin-bottom: 1.25em;
+    text-align: var(--text-center);
+}
+
+/*Grid de habilidades*/
+.grid-skills-container {
+    background-image: url('../img/granulated3.png');
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3.125em;
+    grid-auto-rows: minmax(6.25em, auto);
+    margin: 0 auto;
+    padding-left: 1.25em;
+    max-width: 68.75em;
+    border-radius: var(--border-radius);
+}
+
+.grid-skills-item {
+    padding: 0.625em;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-skills-text {
+    min-height: 2.5em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.grid-skills-text h5 {
+    margin: 0;
+    padding: 0.5em;
+    font-size: 1em;
+    color: var(--color-white);
+}
+
+.technologies-skills {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.25em 0;
+}
+
+.technologies-skills img {
+    width: 1.25em;
+    height: 1.25em;
+    transition: transform 0.3s ease;
+}
+
+.technologies-skills img:hover {
+    transform: scale(1.5);
+}
+
+.technologies-skills span {
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+}
+
+/*Botones ubicados en el header*/
+button {
+    margin-top: 2.5em;
+    padding: 0.625em 1.25em;
+    font-size: 1em;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-linkedin,
+.btn-github,
+.btn-cv {
+    background-color: var(--color-linkedin);
+    color: var(--color-white);
+}
+
+.btn-linkedin:hover {
+    background-color: var(--color-linkedin-hover);
+}
+
+.btn-github:hover {
+    background-color: var(--color-github-hover);
+}
+.btn-cv:hover {
+    background-color: var(--color-cv-hover);
+}
+
+/*Proyectos*/
+.project-container {
+    background-image: url('../img/granulated3.png');
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(12.5em, auto);
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 95vw;
+    border-radius: var(--border-radius);
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0.75em;
+    border-radius: var(--border-radius);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.2em;
+    color: var(--color-white);
+    margin-bottom: 0.5em;
+}
+
+.img-projects {
+    width: 100%;
+    max-width: 25em;
+    height: auto;
+    object-fit: contain;
+    border: 0.125em solid #ffffff;
+    border-radius: var(--border-radius);
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-projects:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.2);
+}
+
+.project-description {
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 0;
+    font-size: 0.9em;
+    color: var(--color-white);
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.icon-text-project {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    flex-wrap: wrap;
+}
+
+.icon-text-project img {
+    height: 1.25em;
+    width: 1.25em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-text-project img:hover {
+    transform: scale(1.5);
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-left: auto;
+}
+
+.icon-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-github);
+    padding: 0.4em;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-links:hover {
+    background-color: #333;
+    transform: scale(1.1);
+}
+
+.icon-links img {
+    width: 1.5em;
+    height: 1.5em;
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 1em;
+        --font-size-title: 1.5em;
+        --font-size-h1: 2.5em;
+        --font-size-h3: 1.5em;
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        margin: 0.313em 0;
+        width: 90%;
+        text-align: center;
+    }
+    .timeline {
+        padding-left: 0.625em;
+    }
+    .grid-skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    .project-item img {
+        max-width: 100%;
+    }
+    .p-about-me {
+        margin-right: 0;
+    }
+    .container-about-me {
+        padding: 0.938em;
+    }
+}
