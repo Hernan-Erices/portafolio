@@ -5,5 +5,5 @@ function github() {
     window.open('https://github.com/Hernan-Erices');
 }
 function linkedin() {
-    window.open('https://www.linkedin.com/in/alejandro-hernán-arévalo-erices-13a0a6230');
+    window.open('https://www.linkedin.com/in/alejandro-arevalo-erices');
 }
