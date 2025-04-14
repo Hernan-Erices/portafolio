@@ -1,7 +1,7 @@
 :root {
-    --color-bg-body: #041642; /*granulated*/
-    --color-bg-section: #003e91; /*granulated 2*/
-    --color-bg-card: #002063; /*granulated 3*/
+    --color-bg-body: #041642;
+    --color-bg-section: #003e91;
+    --color-bg-card: #002063;
     --color-white: #ffffff;
     --color-title: #19192e;
     --color-linkedin: #0077b5;
@@ -128,12 +128,12 @@ nav a:hover {
 .img-profile {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea todo a la izquierda */
+    align-items: flex-start;
     gap: 0.625em;
 }
 
 .img-profile img {
-    width: 12.5em; /* Más pequeño */
+    width: 12.5em;
     height: 12.5em;
     object-fit: cover;
     border-radius: var(--border-radius);
@@ -480,38 +480,71 @@ a {
     transition: transform 0.2s ease;
 }
 
-@media (max-width: 768px) {
-    :root {
-        --font-size-base: 1em;
-        --font-size-title: 1.5em;
-        --font-size-h1: 2.5em;
-        --font-size-h3: 1.5em;
+@media (max-width: 575.98px) and (orientation: portrait) {
+    .header h1 {
+        font-size: 3em;
     }
-    nav {
-        flex-direction: column;
+    .grid-skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center; 
         align-items: center;
     }
-    nav a {
-        margin: 0.313em 0;
-        width: 90%;
-        text-align: center;
+
+    .project-container {
+        grid-template-columns: 1fr;
     }
-    .timeline {
-        padding-left: 0.625em;
+    .img-profile img {
+        width: 8em;
+        height: 8em;
     }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
     .grid-skills-container {
         grid-template-columns: repeat(2, 1fr);
     }
     .project-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
     }
-    .project-item img {
-        max-width: 100%;
+    .img-profile img {
+        width: 10em;
+        height: 10em;
     }
-    .p-about-me {
-        margin-right: 0;
+    .header h1 {
+        font-size: 3.5em;
     }
-    .container-about-me {
-        padding: 0.938em;
+}
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation: landscape) {
+    .grid-skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center; 
+        align-items: center;
+    }
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img-profile img {
+        width: 12em;
+        height: 12em;
+    }
+    .header h1 {
+        font-size: 4.5em;
+    }
+}
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation: portrait) {
+    .grid-skills-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .project-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .img-profile img {
+        width: 14em;
+        height: 14em;
+    }
+    .header h1 {
+        font-size: 5em;
     }
 }
