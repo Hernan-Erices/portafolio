@@ -481,13 +481,29 @@ a {
 }
 
 @media (max-width: 575.98px) and (orientation: portrait) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25em;
+        margin-top: 1.25em;
+        padding-left: 1.25em;
+        justify-items: center;
+        align-items: center;
+        max-width: 68.75em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .header h1 {
         font-size: 3em;
     }
     .grid-skills-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         justify-items: center; 
         align-items: center;
+        gap: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
 
     .project-container {
@@ -500,8 +516,26 @@ a {
 }
 
 @media (min-width: 576px) and (max-width: 991.98px) and (orientation: portrait) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25em;
+        margin-top: 1.25em;
+        padding-left: 1.25em;
+        justify-items: center;
+        align-items: center;
+        max-width: 68.75em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .grid-skills-container {
         grid-template-columns: repeat(2, 1fr);
+        justify-items: center; 
+        align-items: center;
+        gap: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
     .project-container {
         grid-template-columns: repeat(1, 1fr);
@@ -520,6 +554,9 @@ a {
         grid-template-columns: repeat(3, 1fr);
         justify-items: center; 
         align-items: center;
+        gap: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
     .project-container {
         grid-template-columns: repeat(2, 1fr);
@@ -535,7 +572,12 @@ a {
 
 @media (min-width: 991.98px) and (max-width: 1199.98px) and (orientation: portrait) {
     .grid-skills-container {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center; 
+        align-items: center;
+        gap: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
     }
     .project-container {
         grid-template-columns: repeat(3, 1fr);
